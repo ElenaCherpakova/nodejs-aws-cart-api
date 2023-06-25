@@ -13,7 +13,7 @@ export class CartService {
   }
 
   createByUserId(userId: string) {
-    const id = v4(v4());
+    const id = v4();
     const userCart = {
       id,
       items: [],
