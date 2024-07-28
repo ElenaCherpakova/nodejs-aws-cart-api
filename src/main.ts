@@ -17,6 +17,7 @@ const bootstrapServer = async (): Promise<Server> => {
   nestApp.enableCors({
     origin: (req, callback) => callback(null, true),
   });
+
   await nestApp.init();
   return createServer(expressApp);
 };
@@ -26,9 +27,6 @@ export const handler: Handler = async (
   context: Context,
   callback: Callback,
 ) => {
-  console.log('Received event:', JSON.stringify(event));
-  console.log('Context:', JSON.stringify(context));
-
   if (!cachedServer) {
     console.log('Initializing server...');
     cachedServer = await bootstrapServer();
