@@ -1,5 +1,6 @@
 // Used for infrastructure, not run within the Docker container
 cdk-deploy
+cdk-cart-api
 // Contains installed dependencies. Should be installed within the Docker container
 node_modules
 // Unnecessary log file
