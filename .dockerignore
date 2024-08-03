@@ -1,23 +1,30 @@
+// Used for infrastructure, not run within the Docker container
 cdk-deploy
+// Contains installed dependencies. Should be installed within the Docker container
 node_modules
+// Unnecessary log file
 npm-debug.log
-
-
+// Configuration file for Docker, not needed inside the image
 Dockerfile
+//Not needed inside the image.
 .dockerignore
-
+// Not needed inside the image.
 sql
+// Contains compiled output. Compiled within the Docker container
 dist
+// Configuration file for Webpack, not needed inside the image
 webpack.config.js
-
+// Specifies files to ignore in git, which is not needed in the Docker image.
 .gitignore
 .git
 .env
+// This directory contains version control history and metadata.
 .DS_Store
-
+// Contains test files doesnt need to be included in the Docker image
 test
 tests
 *.spec.ts
 *.test.ts
+// Not needed in production Docker image
 .eslintrc.js
 .prettierrc
